@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useAuth } from "../Context/User.context";
+const BASE_URL = 'https://backend-4-z15j.onrender.com'
 
 function ChangePassword() {
   const { user } = useAuth();
@@ -19,7 +20,7 @@ function ChangePassword() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:2100/api/changepassword",
+        `${BASE_URL}/api/changepassword`,
         { currentPassword, newPassword },
         {
           headers: {

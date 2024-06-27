@@ -16,7 +16,8 @@ const ProductDetails = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const { id } = useParams();
-  const API_BASE_URL = "http://localhost:2100";
+  const API_BASE_URL = 'https://backend-4-z15j.onrender.com'
+    ;
   const { user } = useAuth();
   const { cartItems, dispatch } = useCart();
   const navigate = useNavigate()

@@ -5,7 +5,8 @@ import axios from "axios";
 import Loader from '../Components/Loader/Loader';
 
 function Signup() {
-  const API_BASE_URL = 'http://localhost:2100';
+  const API_BASE_URL = 'https://backend-4-z15j.onrender.com'
+    ;
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

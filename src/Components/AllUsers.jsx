@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import AdminSideBar from '../Pages/AdminSideBar';
 import moment from 'moment';
+const BASE_URL = 'https://backend-4-z15j.onrender.com'
 // allusers component 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
@@ -11,7 +12,7 @@ const UsersList = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:2100/api/allusers', {
+        const response = await axios.get(`${BASE_URL}/allusers`, {
           headers: {
             Authorization: `JWT ${token}`
           }

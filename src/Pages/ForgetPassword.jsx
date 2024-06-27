@@ -7,7 +7,8 @@ function ForgetPassword() {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [answer, setAnswer] = useState("");
-  const API_BASE_URL = "http://localhost:2100";
+  const API_BASE_URL = 'https://backend-4-z15j.onrender.com'
+    ;
   const navigate = useNavigate();
 
   const submit = async (e) => {

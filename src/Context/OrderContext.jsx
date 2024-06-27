@@ -1,5 +1,6 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import axios from 'axios';
+const BASE_URL = 'https://backend-4-z15j.onrender.com'
 
 // Initial state for order context
 const initialState = {
@@ -44,7 +45,7 @@ const addOrderItem = async (order) => {
         'Content-Type': 'application/json',
       },
     };
-    const response = await axios.post('http://localhost:2100/api/orders', order, config);
+    const response = await axios.post(`${BASE_URL}/api/orders`, order, config);
     console.log('Response data:', response.data);
     return response.data; // Return data received from API
   } catch (error) {

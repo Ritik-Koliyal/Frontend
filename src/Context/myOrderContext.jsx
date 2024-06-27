@@ -1,5 +1,6 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import axios from 'axios';
+const BASE_URL = 'https://backend-4-z15j.onrender.com'
 
 // Action Types
 const ORDER_HISTORY_REQUEST = 'ORDER_HISTORY_REQUEST';
@@ -51,7 +52,7 @@ export const MyOrderProvider = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get('http://localhost:2100/api/myorders', config);
+      const { data } = await axios.get(`${BASE_URL}/api/myorders`, config);
       dispatch({ type: ORDER_HISTORY_SUCCESS, payload: data });
     } catch (error) {
       dispatch({ type: ORDER_HISTORY_FAIL, payload: error.response?.data?.message || error.message });

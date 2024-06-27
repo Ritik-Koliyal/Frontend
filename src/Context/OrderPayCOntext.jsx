@@ -1,5 +1,6 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import axios from 'axios';
+const BASE_URL = 'https://backend-4-z15j.onrender.com'
 
 // Action Types
 const ORDER_PAY_REQUEST = 'ORDER_PAY_REQUEST';
@@ -59,7 +60,7 @@ export const OrderPayProvider = ({ children }) => {
         },
       };
 
-      const { data } = await axios.put(`http://localhost:2100/api/${orderId}/pay`, paymentResult, config);
+      const { data } = await axios.put(`${BASE_URL}/api/${orderId}/pay`, paymentResult, config);
 
 
       dispatch({

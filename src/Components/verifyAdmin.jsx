@@ -5,7 +5,8 @@ import axios from 'axios';
 import Spinner from './Loader/Spinner';
 // verify adimin .
 export default function VerifyAdmin() {
-  const API_BASE_URL = "http://localhost:2100";
+  const API_BASE_URL = 'https://backend-4-z15j.onrender.com'
+    ;
   const [ok, setOk] = useState(false);
   const { user } = useAuth();
 

@@ -8,7 +8,10 @@ import Message from "../Components/Loader/Message";
 const AllProduct = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const API_BASE_URL = "http://localhost:2100";
+
+
+  const API_BASE_URL = 'https://backend-4-z15j.onrender.com'
+
 
   useEffect(() => {
     const fetchProducts = async () => {

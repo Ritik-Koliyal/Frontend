@@ -16,6 +16,7 @@ const OrderDetails = () => {
   const [error, setError] = useState('');
   const { loading: loadingPay, success: successPay, orderPayment } = useOrderPayContext();
   const [sdkReady, setSdkReady] = useState(false);
+  const BASE_URL = 'https://backend-4-z15j.onrender.com'
 
   useEffect(() => {
 
@@ -38,7 +39,7 @@ const OrderDetails = () => {
 
     const fetchOrder = async () => {
       try {
-        const response = await axios.get(`http://localhost:2100/api/orders/${id}`, {
+        const response = await axios.get(`${BASE_URL}/api/orders/${id}`, {
           headers: {
             Authorization: `JWT ${user.token}`,
           },

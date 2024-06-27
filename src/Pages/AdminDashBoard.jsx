@@ -5,6 +5,8 @@ import { toast } from 'react-toastify';
 import moment from 'moment';
 import AdminSideBar from './AdminSideBar';
 import { useState, useEffect } from 'react';
+const BASE_URL = 'https://backend-4-z15j.onrender.com'
+
 // function admin dashboard 
 function AdminDashBoard() {
   const { user } = useAuth();
@@ -16,7 +18,7 @@ function AdminDashBoard() {
     const fetchOrders = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:2100/api/allorders', {
+        const response = await axios.get(`${BASE_URL}/api/allorders`, {
           headers: {
             Authorization: `JWT ${token}`
           }
@@ -35,7 +37,7 @@ function AdminDashBoard() {
   const handleStatusUpdate = async (orderId, status) => {
     try {
       const token = localStorage.getItem('token'); // Or use `user.token` if available from `useAuth`
-      await axios.put(`http://localhost:2100/api/orders/${orderId}/status`, { status }, {
+      await axios.put(`${BASE_URL}/api/orders/${orderId}/status`, { status }, {
         headers: {
           Authorization: `JWT ${token}`
         }

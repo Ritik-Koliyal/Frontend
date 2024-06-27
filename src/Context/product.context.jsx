@@ -12,7 +12,8 @@ export const ProductProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
-  const API_BASE_URL = "http://localhost:2100";
+  const API_BASE_URL = 'https://backend-4-z15j.onrender.com'
+    ;
 
   useEffect(() => {
     fetchProducts();
