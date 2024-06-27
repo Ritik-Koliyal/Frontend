@@ -1,0 +1,61 @@
+.breadcrumb-container {
+  position: relative;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumb-item {
+  position: relative;
+  margin: 0 0.25rem;
+}
+
+.breadcrumb-item .disabled {
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.breadcrumb-item .active {
+  color: #007bff;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb-item a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+
+.progress-step {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #ffc107;
+  height: 4px;
+}
+
+.progress-step.step1 {
+  width: 25%;
+}
+
+.progress-step.step2 {
+  width: 50%;
+}
+
+.progress-step.step3 {
+  width: 75%;
+}
+
+.progress-step.step4 {
+  width: 100%;
+}
