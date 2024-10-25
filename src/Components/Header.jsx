@@ -58,7 +58,7 @@ function Header() {
     <>
       <nav className="navbar bg-dark p-3">
         <div className="container-fluid d-flex justify-content-between">
-          <Link to="/" className="navbar-brand mx-2 text-white">shivi.fashion</Link>
+          <Link to="/" className="navbar-brand mx-2 text-white">Kiara.fashion</Link>
           <form className="d-flex align-items-center" role="search" onSubmit={handleSearch}>
             <input
               className="form-control search-box"
